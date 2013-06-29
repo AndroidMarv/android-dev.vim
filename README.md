@@ -4,7 +4,7 @@
 [Android](http://www.android.com) is an awesome mobile operating system that's 
 open and plainly rocks. *Why not put these two together?*
 
-[`android-dev.vim`](https://github.com/jalcine/android-dev.vim)is a Vim plugin
+[`android-dev.vim`](https://github.com/jalcine/android-dev.vim/tree/v0.1.0)is a Vim plugin
 that allows you to build your Android application on the command line and 
 within Vim. The plug-in is written purely in VimL for portability.
 
