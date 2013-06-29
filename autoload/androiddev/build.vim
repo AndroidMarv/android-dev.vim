@@ -19,3 +19,7 @@ endfunction
 function androiddev#install#release()
   return system("ant installr")
 endfunction
+
+function androiddev#build#test()
+  return system("ant test")
+endfunction
