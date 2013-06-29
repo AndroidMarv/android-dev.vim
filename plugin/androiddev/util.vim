@@ -13,8 +13,7 @@ endfunction
 
 function! androiddev#util#RunCommand(program, arguments)
   let l:argstr = join(a:arguments, " ")
-  echo l:argstr
-  let l:output = system(shellescape(a:program) . " " . l:argstr)
+  let l:output = system(a:program . " " . l:argstr)
   return l:output
 endfunction
 
