@@ -42,6 +42,10 @@ Extensibility is what we love and one of the more popular philosophies out
 there. The following are a list of recommended options to be set after 
 installing this plugin.
 
+ + `g:android_sdk_path` defines the path that at which you'd be able to find 
+   your SDK tools for Android. The folders `tools` and `platform-tools` should 
+   be discoverable in here.
+
 ## License
 This plugin is licensed under the MIT license. Make it work, people!
 
