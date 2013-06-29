@@ -16,3 +16,19 @@ function! androiddev#util#RunCommand(program, arguments)
   let l:output = system(shellescape(a:program) . " " . shellescape(l:argstr))
   return l:output
 endfunction
+
+function! androiddev#util#GetRootDirectory()
+  let current_path = getcwd()
+  while 1 
+    if filereadable(current_path . "/ant.properties")
+      return current_path
+    endif
+
+    let items = split(current_path, "/")
+    if !len(items)
+      return 0
+    endif
+
+    let current_path = substitute(current_path,"/" .items[-1],"","g")
+  endwhile
+endfunction
