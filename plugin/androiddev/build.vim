@@ -1,16 +1,28 @@
 " TODO: Move to the project's root directory.
 function! androiddev#build#debug()
-  return system("ant debug")
+  let old_path = getcwd()
+  if androiddev#util#JumpToRootDirectory()
+    return system("ant debug")
+  endif
 endfunction
 
 function! androiddev#build#release()
-  return system("ant release")
+  let old_path = getcwd()
+  if androiddev#util#JumpToRootDirectory()
+    return system("ant release")
+  endif
 endfunction
 
 function androiddev#build#clean()
-  return system("ant clean")
+  let old_path = getcwd()
+  if androiddev#util#JumpToRootDirectory()
+    return system("ant clean")
+  endif
 endfunction
 
 function androiddev#build#test()
-  return system("ant test")
+  let old_path = getcwd()
+  if androiddev#util#JumpToRootDirectory()
+    return system("ant test")
+  endif
 endfunction

@@ -32,3 +32,12 @@ function! androiddev#util#GetRootDirectory()
     let current_path = substitute(current_path,"/" .items[-1],"","g")
   endwhile
 endfunction
+
+function! androiddev#util#JumpToRootDirectory()
+  let current_path = getcwd()
+  let root_path = androiddev#util#GetRootDirectory()
+
+  if root_path
+    cd root_path
+    endif
+endfunction
