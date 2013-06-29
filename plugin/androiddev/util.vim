@@ -13,14 +13,14 @@ endfunction
 
 function! androiddev#util#RunCommand(program, arguments)
   let l:argstr = join(a:arguments, " ")
-  let l:output = system(shellescape(a:program) . " " . shellescape(l:argstr))
+  let l:output = system(shellescape(a:program) . " " . l:argstr)
   return l:output
 endfunction
 
 function! androiddev#util#GetRootDirectory()
   let current_path = getcwd()
   while 1 
-    if filereadable(current_path . "/ant.properties")
+    if filereadable(current_path . "/AndroidManifest.xml")
       return current_path
     endif
 
@@ -39,5 +39,5 @@ function! androiddev#util#JumpToRootDirectory()
 
   if root_path
     cd root_path
-    endif
+  endif
 endfunction
